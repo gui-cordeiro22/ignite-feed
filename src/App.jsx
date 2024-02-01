@@ -19,12 +19,12 @@ export function App() {
       />
 
       <Post
-        author = 'Victor Mayworm'
+        author = 'Exemplo'
         content = 'Quisque tincidunt aliquet eros nec scelerisque. Sed a molestie felis. Etiam pellentesque feugiat nibh, quis rutrum tortor. Quisque vel lectus sodales, interdum ex at, molestie nibh. Nam vitae mattis massa. Vestibulum mattis metus tellus, eget molestie nunc bibendum in. Fusce non elit et ligula malesuada gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In quam nulla, tempus sed porttitor et, consectetur nec risus. Proin ex lorem, pharetra ac lacinia eu, mattis quis mauris.'
       />
 
       <Post
-        author = 'Luiz Paulo'
+        author = 'Exemplo'
         content = 'Quisque tincidunt aliquet eros nec scelerisque. Sed a molestie felis. Etiam pellentesque feugiat nibh, quis rutrum tortor. Quisque vel lectus sodales, interdum ex at, molestie nibh. Nam vitae mattis massa. Vestibulum mattis metus tellus, eget molestie nunc bibendum in. Fusce non elit et ligula malesuada gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In quam nulla, tempus sed porttitor et, consectetur nec risus. Proin ex lorem, pharetra ac lacinia eu, mattis quis mauris.'
       />
         </main>
