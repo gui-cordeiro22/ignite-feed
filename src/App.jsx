@@ -1,8 +1,9 @@
 import { Header } from './components/header';
-import {Post} from './post';
+import {Post} from './components/Post';
+import {Sidebar} from './components/Sidebar'
 import './components/global.css'
 import styles from './App.module.css'
-import {Sidebar} from './components/Sidebar'
+
 export function App() {
   return (
     <div>
@@ -18,15 +19,6 @@ export function App() {
         content = 'Quisque tincidunt aliquet eros nec scelerisque. Sed a molestie felis. Etiam pellentesque feugiat nibh, quis rutrum tortor. Quisque vel lectus sodales, interdum ex at, molestie nibh. Nam vitae mattis massa. Vestibulum mattis metus tellus, eget molestie nunc bibendum in. Fusce non elit et ligula malesuada gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In quam nulla, tempus sed porttitor et, consectetur nec risus. Proin ex lorem, pharetra ac lacinia eu, mattis quis mauris.'
       />
 
-      <Post
-        author = 'Exemplo'
-        content = 'Quisque tincidunt aliquet eros nec scelerisque. Sed a molestie felis. Etiam pellentesque feugiat nibh, quis rutrum tortor. Quisque vel lectus sodales, interdum ex at, molestie nibh. Nam vitae mattis massa. Vestibulum mattis metus tellus, eget molestie nunc bibendum in. Fusce non elit et ligula malesuada gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In quam nulla, tempus sed porttitor et, consectetur nec risus. Proin ex lorem, pharetra ac lacinia eu, mattis quis mauris.'
-      />
-
-      <Post
-        author = 'Exemplo'
-        content = 'Quisque tincidunt aliquet eros nec scelerisque. Sed a molestie felis. Etiam pellentesque feugiat nibh, quis rutrum tortor. Quisque vel lectus sodales, interdum ex at, molestie nibh. Nam vitae mattis massa. Vestibulum mattis metus tellus, eget molestie nunc bibendum in. Fusce non elit et ligula malesuada gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In quam nulla, tempus sed porttitor et, consectetur nec risus. Proin ex lorem, pharetra ac lacinia eu, mattis quis mauris.'
-      />
         </main>
       </div>
 
