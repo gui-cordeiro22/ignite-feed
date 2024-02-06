@@ -15,8 +15,7 @@ const posts = [
 
     content: [
       {type: 'paragraph', content: 'Fala galeraa 👋',},
-      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto',},
-      {type: 'paragraph', content:'que fiz no NLW Return, evento da Rocketseat.O nome do projeto',},
+      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare',},
       {type: 'link', content:'👉 jane.design/doctorcare',},
     ],
 
@@ -52,8 +51,14 @@ export function App() {
         <Sidebar />
 
         <main>
-          {posts.map(posts => {
-            return <Post />
+          {posts.map(post => {
+            return (
+              <Post
+                author= {post.author}
+                content= {post.content}
+                publishedAt={post.publishedAt}
+              />
+            )
           })}
         </main>
       </div>
