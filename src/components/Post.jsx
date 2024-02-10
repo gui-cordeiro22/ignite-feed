@@ -9,7 +9,7 @@ export function Post ({ author, publishedAt, content }) {
 
 /*Comentário inicial*/
   const [comments, setComments] = useState ([
-    'Post muito bacana!',
+
   ])
 /*Formatando a data de publicação para ptBR*/
   const publishedDateFormatted = format (publishedAt, "dd 'de' LLLL 'às' HH:mm'h'", {
@@ -20,7 +20,7 @@ export function Post ({ author, publishedAt, content }) {
     locale: ptBr,
     addSuffix: true,
   })
-/*Criando novo estado para armazenar o valor da textarea*/
+/*Criando novo estado para armazenar em tempo real o valor da textarea*/
   const [newCommentText,setNewCommentText] = useState('')
 
 /*Acrescenta o comentário*/
@@ -32,6 +32,7 @@ export function Post ({ author, publishedAt, content }) {
   }
 /*Armazena o valor da textarea*/
   function handleNewCommentChange () {
+    event.target.setCustomValidity('')
     setNewCommentText(event.target.value)
 
   }
@@ -43,6 +44,11 @@ export function Post ({ author, publishedAt, content }) {
     setComments(commentsWithoutDeletedOne)
   }
 
+  function handleNewCommentInvalid() {
+    event.target.setCustomValidity('Esse campo é obrigatório!')
+  }
+
+  const isNewCommentEmpty = newCommentText.length === 0 /*Variáveis auxiliares que facilitam na manutenção do code*/
   return (
     <article className= {styles.post}>
       <header>
@@ -73,10 +79,14 @@ export function Post ({ author, publishedAt, content }) {
         onChange={handleNewCommentChange}
         value={newCommentText}
         placeholder='Deixe um comentário'
+        required={true}
+        onInvalid={handleNewCommentInvalid}
         />
 
         <footer>
-          <button type="submit">Publicar</button>
+          <button type="submit" disabled={isNewCommentEmpty}>
+            Publicar
+          </button>
         </footer>
       </form>
 
